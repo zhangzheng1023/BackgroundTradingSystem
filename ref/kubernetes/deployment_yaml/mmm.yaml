@@ -1,0 +1,42 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mmm-deployment
+  namespace: team5
+  labels:
+    app: mmm
+spec:
+  replicas: 2 # 副本数量。 创建ReplicaSet管理
+  selector:   # 选择器
+    matchLabels:  # 选择 匹配标签 app=appx 的 Pods
+      app: mmm
+  template:  # Pod模版
+    metadata:
+      labels:  # Pod 标签
+        app: mmm
+    spec:
+      containers:  # Pod包含的容器
+        - name: mmm-container
+          image: yinli2020-docker.pkg.coding.net/beijing-backend/team5/mmm:1.0.1
+          env: # 环境变量
+            - name: mmm_VERSION
+              value: 1.0.0
+          ports:  # 容器暴露的端口号
+            - containerPort: 8086
+      imagePullSecrets:
+        - name: yinli-coding-docker-registry
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mmm-service
+  namespace: team5
+spec:
+  selector:  # 匹配标签 app=appx 的 Pods
+    app: mmm
+  ports:
+    - protocol: TCP  # 服务协议
+      port: 8086   # 服务端口号
+      targetPort: 8086 # 目标Pod的端口号
+      name: http

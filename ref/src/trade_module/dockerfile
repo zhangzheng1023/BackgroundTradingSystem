@@ -1,0 +1,15 @@
+FROM yinli2020-docker.pkg.coding.net/beijing-backend/team5/trade_module_build:1.0
+# RUN apt update && apt install -y  ssh
+# RUN git clone git@e.coding.net:yinli2020/beijing-backend/team5.git /home/team5
+# WORKDIR /home/team5/src/trade_module/build
+COPY ./ /home
+WORKDIR /home/build
+RUN cmake ../
+RUN make
+ENV env=online
+EXPOSE 8888
+CMD ["./server"]
+#CMD ["top"]
+
+
+
