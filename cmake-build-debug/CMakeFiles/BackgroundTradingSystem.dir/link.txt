@@ -1,0 +1,3 @@
+"D:\JetBrains\CLion 2021.2.4\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\BackgroundTradingSystem.dir/objects.a
+D:\Compiler\mingw64\bin\ar.exe cr CMakeFiles\BackgroundTradingSystem.dir/objects.a @CMakeFiles\BackgroundTradingSystem.dir\objects1.rsp
+D:\Compiler\mingw64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\BackgroundTradingSystem.dir/objects.a -Wl,--no-whole-archive -o BackgroundTradingSystem.exe -Wl,--out-implib,libBackgroundTradingSystem.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\BackgroundTradingSystem.dir\linklibs.rsp
