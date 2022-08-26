@@ -1,23 +1,32 @@
 #include <iostream>
 #include <stdio.h>
+#include <time.h>
+#include "logger.h"
 
 using std::string;
 using std::cout;
 using std::endl;
 
-static string LogPath = "../../log/20220809";
-
-int main() {
-    char sst[] = "abcabc";
-
-    cout << "hello logger" << endl;
-    FILE *logger;
-    logger = fopen(LogPath.c_str(), "a");
-    FILE *fp;
-    char str[] = "This is runoob.com";
-    fp = fopen( "file.txt" , "w" );
-    fwrite(str, sizeof(str), 1, fp );
-    fclose(fp);
-    return 0;
+// Timer 获取格式化的时间
+string Timer::getFormatTime() {
+    time_t temp;
+    time (&temp);
+    char tmp[64];
+    strftime(tmp, sizeof(tmp), "%Y-%m-%d %H:%M:%S", localtime(&temp));
+    return tmp;
 }
 
+// 初始化类中的文件描述符
+Logger::Logger() {
+    fd = fopen("a.log", "w");
+}
+
+Logger::~Logger() {
+    fclose(fd);
+}
+
+void Logger::writeLog(string &log) {
+    string time = Timer::getFormatTime();
+    fwrite(time.c_str(), sizeof(time), 1, fd);
+    fwrite(log.c_str(), sizeof(log), 1, fd);
+}

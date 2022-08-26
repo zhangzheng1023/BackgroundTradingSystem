@@ -117,65 +117,89 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named test1
+# Target rules for targets named webTest
 
 # Build rule for target.
-test1: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test1
-.PHONY : test1
+webTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 webTest
+.PHONY : webTest
 
 # fast build rule for target.
-test1/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/build
-.PHONY : test1/fast
+webTest/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/webTest.dir/build.make CMakeFiles/webTest.dir/build
+.PHONY : webTest/fast
 
-root/BackgroundTradingSystem/src/Logger/logger.o: root/BackgroundTradingSystem/src/Logger/logger.cc.o
-.PHONY : root/BackgroundTradingSystem/src/Logger/logger.o
-
-# target to build an object file
-root/BackgroundTradingSystem/src/Logger/logger.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/root/BackgroundTradingSystem/src/Logger/logger.cc.o
-.PHONY : root/BackgroundTradingSystem/src/Logger/logger.cc.o
-
-root/BackgroundTradingSystem/src/Logger/logger.i: root/BackgroundTradingSystem/src/Logger/logger.cc.i
-.PHONY : root/BackgroundTradingSystem/src/Logger/logger.i
-
-# target to preprocess a source file
-root/BackgroundTradingSystem/src/Logger/logger.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/root/BackgroundTradingSystem/src/Logger/logger.cc.i
-.PHONY : root/BackgroundTradingSystem/src/Logger/logger.cc.i
-
-root/BackgroundTradingSystem/src/Logger/logger.s: root/BackgroundTradingSystem/src/Logger/logger.cc.s
-.PHONY : root/BackgroundTradingSystem/src/Logger/logger.s
-
-# target to generate assembly for a file
-root/BackgroundTradingSystem/src/Logger/logger.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/root/BackgroundTradingSystem/src/Logger/logger.cc.s
-.PHONY : root/BackgroundTradingSystem/src/Logger/logger.cc.s
-
-root/BackgroundTradingSystem/test/LoggerTest.o: root/BackgroundTradingSystem/test/LoggerTest.cc.o
-.PHONY : root/BackgroundTradingSystem/test/LoggerTest.o
+root/BackgroundTradingSystem/src/WebServer/httpConn.o: root/BackgroundTradingSystem/src/WebServer/httpConn.cc.o
+.PHONY : root/BackgroundTradingSystem/src/WebServer/httpConn.o
 
 # target to build an object file
-root/BackgroundTradingSystem/test/LoggerTest.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/root/BackgroundTradingSystem/test/LoggerTest.cc.o
-.PHONY : root/BackgroundTradingSystem/test/LoggerTest.cc.o
+root/BackgroundTradingSystem/src/WebServer/httpConn.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/webTest.dir/build.make CMakeFiles/webTest.dir/root/BackgroundTradingSystem/src/WebServer/httpConn.cc.o
+.PHONY : root/BackgroundTradingSystem/src/WebServer/httpConn.cc.o
 
-root/BackgroundTradingSystem/test/LoggerTest.i: root/BackgroundTradingSystem/test/LoggerTest.cc.i
-.PHONY : root/BackgroundTradingSystem/test/LoggerTest.i
+root/BackgroundTradingSystem/src/WebServer/httpConn.i: root/BackgroundTradingSystem/src/WebServer/httpConn.cc.i
+.PHONY : root/BackgroundTradingSystem/src/WebServer/httpConn.i
 
 # target to preprocess a source file
-root/BackgroundTradingSystem/test/LoggerTest.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/root/BackgroundTradingSystem/test/LoggerTest.cc.i
-.PHONY : root/BackgroundTradingSystem/test/LoggerTest.cc.i
+root/BackgroundTradingSystem/src/WebServer/httpConn.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/webTest.dir/build.make CMakeFiles/webTest.dir/root/BackgroundTradingSystem/src/WebServer/httpConn.cc.i
+.PHONY : root/BackgroundTradingSystem/src/WebServer/httpConn.cc.i
 
-root/BackgroundTradingSystem/test/LoggerTest.s: root/BackgroundTradingSystem/test/LoggerTest.cc.s
-.PHONY : root/BackgroundTradingSystem/test/LoggerTest.s
+root/BackgroundTradingSystem/src/WebServer/httpConn.s: root/BackgroundTradingSystem/src/WebServer/httpConn.cc.s
+.PHONY : root/BackgroundTradingSystem/src/WebServer/httpConn.s
 
 # target to generate assembly for a file
-root/BackgroundTradingSystem/test/LoggerTest.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/root/BackgroundTradingSystem/test/LoggerTest.cc.s
-.PHONY : root/BackgroundTradingSystem/test/LoggerTest.cc.s
+root/BackgroundTradingSystem/src/WebServer/httpConn.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/webTest.dir/build.make CMakeFiles/webTest.dir/root/BackgroundTradingSystem/src/WebServer/httpConn.cc.s
+.PHONY : root/BackgroundTradingSystem/src/WebServer/httpConn.cc.s
+
+root/BackgroundTradingSystem/src/WebServer/locker.o: root/BackgroundTradingSystem/src/WebServer/locker.cc.o
+.PHONY : root/BackgroundTradingSystem/src/WebServer/locker.o
+
+# target to build an object file
+root/BackgroundTradingSystem/src/WebServer/locker.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/webTest.dir/build.make CMakeFiles/webTest.dir/root/BackgroundTradingSystem/src/WebServer/locker.cc.o
+.PHONY : root/BackgroundTradingSystem/src/WebServer/locker.cc.o
+
+root/BackgroundTradingSystem/src/WebServer/locker.i: root/BackgroundTradingSystem/src/WebServer/locker.cc.i
+.PHONY : root/BackgroundTradingSystem/src/WebServer/locker.i
+
+# target to preprocess a source file
+root/BackgroundTradingSystem/src/WebServer/locker.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/webTest.dir/build.make CMakeFiles/webTest.dir/root/BackgroundTradingSystem/src/WebServer/locker.cc.i
+.PHONY : root/BackgroundTradingSystem/src/WebServer/locker.cc.i
+
+root/BackgroundTradingSystem/src/WebServer/locker.s: root/BackgroundTradingSystem/src/WebServer/locker.cc.s
+.PHONY : root/BackgroundTradingSystem/src/WebServer/locker.s
+
+# target to generate assembly for a file
+root/BackgroundTradingSystem/src/WebServer/locker.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/webTest.dir/build.make CMakeFiles/webTest.dir/root/BackgroundTradingSystem/src/WebServer/locker.cc.s
+.PHONY : root/BackgroundTradingSystem/src/WebServer/locker.cc.s
+
+root/BackgroundTradingSystem/src/WebServer/main.o: root/BackgroundTradingSystem/src/WebServer/main.cc.o
+.PHONY : root/BackgroundTradingSystem/src/WebServer/main.o
+
+# target to build an object file
+root/BackgroundTradingSystem/src/WebServer/main.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/webTest.dir/build.make CMakeFiles/webTest.dir/root/BackgroundTradingSystem/src/WebServer/main.cc.o
+.PHONY : root/BackgroundTradingSystem/src/WebServer/main.cc.o
+
+root/BackgroundTradingSystem/src/WebServer/main.i: root/BackgroundTradingSystem/src/WebServer/main.cc.i
+.PHONY : root/BackgroundTradingSystem/src/WebServer/main.i
+
+# target to preprocess a source file
+root/BackgroundTradingSystem/src/WebServer/main.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/webTest.dir/build.make CMakeFiles/webTest.dir/root/BackgroundTradingSystem/src/WebServer/main.cc.i
+.PHONY : root/BackgroundTradingSystem/src/WebServer/main.cc.i
+
+root/BackgroundTradingSystem/src/WebServer/main.s: root/BackgroundTradingSystem/src/WebServer/main.cc.s
+.PHONY : root/BackgroundTradingSystem/src/WebServer/main.s
+
+# target to generate assembly for a file
+root/BackgroundTradingSystem/src/WebServer/main.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/webTest.dir/build.make CMakeFiles/webTest.dir/root/BackgroundTradingSystem/src/WebServer/main.cc.s
+.PHONY : root/BackgroundTradingSystem/src/WebServer/main.cc.s
 
 # Help Target
 help:
@@ -185,13 +209,16 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... test1"
-	@echo "... root/BackgroundTradingSystem/src/Logger/logger.o"
-	@echo "... root/BackgroundTradingSystem/src/Logger/logger.i"
-	@echo "... root/BackgroundTradingSystem/src/Logger/logger.s"
-	@echo "... root/BackgroundTradingSystem/test/LoggerTest.o"
-	@echo "... root/BackgroundTradingSystem/test/LoggerTest.i"
-	@echo "... root/BackgroundTradingSystem/test/LoggerTest.s"
+	@echo "... webTest"
+	@echo "... root/BackgroundTradingSystem/src/WebServer/httpConn.o"
+	@echo "... root/BackgroundTradingSystem/src/WebServer/httpConn.i"
+	@echo "... root/BackgroundTradingSystem/src/WebServer/httpConn.s"
+	@echo "... root/BackgroundTradingSystem/src/WebServer/locker.o"
+	@echo "... root/BackgroundTradingSystem/src/WebServer/locker.i"
+	@echo "... root/BackgroundTradingSystem/src/WebServer/locker.s"
+	@echo "... root/BackgroundTradingSystem/src/WebServer/main.o"
+	@echo "... root/BackgroundTradingSystem/src/WebServer/main.i"
+	@echo "... root/BackgroundTradingSystem/src/WebServer/main.s"
 .PHONY : help
 
 

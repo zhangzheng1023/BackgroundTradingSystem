@@ -1,0 +1,16 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/root/BackgroundTradingSystem'
+/usr/bin/cmake -S/root/BackgroundTradingSystem -B/root/BackgroundTradingSystem --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/bin/cmake -E cmake_progress_start /root/BackgroundTradingSystem/CMakeFiles /root/BackgroundTradingSystem//CMakeFiles/progress.marks
+make -s -f CMakeFiles/Makefile2 all
+make[1]: Entering directory '/root/BackgroundTradingSystem'
+ 
+make[1]: Leaving directory '/root/BackgroundTradingSystem'
+make: Leaving directory '/root/BackgroundTradingSystem'
+ 
+make[1]: CMakeFiles/Makefile2: No such file or directory
+make[1]: *** No rule to make target 'CMakeFiles/Makefile2'.
+make[1]: Failed to remake makefile 'CMakeFiles/Makefile2'.
+make[1]: *** No rule to make target 'all'.
+make: *** [Makefile:91: all] Error 2
+
